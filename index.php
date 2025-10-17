@@ -1,6 +1,6 @@
 <?php
+$paquetes = $conexion->query("SELECT * FROM la_banda.paqueteviaje");
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
