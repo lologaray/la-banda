@@ -1,5 +1,5 @@
 <?php
-$paquetes = $conexion->query("SELECT * FROM la_banda.paqueteviaje");
+$paquetes = $conexion->query("SELECT * FROM la_banda");
 ?>
 <!DOCTYPE html>
 <html lang="es">
