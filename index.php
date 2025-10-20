@@ -403,6 +403,6 @@ $paquetes = $conexion->query("SELECT * FROM la_banda");
 
 </body>
 </html>
-  <?php?>
+  
 </body>
 </html>
