@@ -14,10 +14,14 @@ $paquetes = $conexion->query("SELECT * FROM la_banda");
 <body>
 
   <header>
-    <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
-    <h1 class="logo">M Viajes</h1>
-    <p>"Explora el mundo, descubre tu próxima aventura"</p>
-  </header>
+  <div class="logo-container">
+    <img src="02202fb1-db80-454d-ae25-5203c310d13b.png" alt="Logo M Viajes" class="logo-img">
+  </div>
+  <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+  <h1 class="logo">M Viajes</h1>
+  <p>"Explora el mundo, descubre tu próxima aventura"</p>
+</header>
+
 
   <div id="cart-modal" class="cart-modal">
     <h3>
