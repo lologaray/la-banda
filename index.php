@@ -1,7 +1,10 @@
 <?php
 require_once "componentes/conexion.php";
-$paquetes = $conexion->query("SELECT * FROM la_banda");
-
+$paquetes = $conexion->query("
+SELECT * 
+FROM la_banda
+WHERE paquetes.estado = 'Disponible';
+");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +19,7 @@ $paquetes = $conexion->query("SELECT * FROM la_banda");
 
   <header>
   <div class="logo-container">
-    <img src="ejemplo de m viajes.webp" alt="Logo M Viajes" class="logo-img">
+    <img src="02202fb1-db80-454d-ae25-5203c310d13b.png" alt="Logo M Viajes" class="logo-img">
   </div>
   <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
   <h1 class="logo">M Viajes</h1>
