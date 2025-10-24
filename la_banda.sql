@@ -1,31 +1,8 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost
--- Tiempo de generación: 24-10-2025 a las 20:07:58
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `la_banda`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `compra`
---
 
 CREATE TABLE `compra` (
   `id_compra` int(11) NOT NULL,
@@ -36,9 +13,7 @@ CREATE TABLE `compra` (
   `total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `compra`
---
+
 
 INSERT INTO `compra` (`id_compra`, `id_usuario`, `id_paquete`, `fecha_compra`, `estado`, `total`) VALUES
 (1, 1, 2, '2025-08-10', 'Pagada', 1500.00),
@@ -52,11 +27,6 @@ INSERT INTO `compra` (`id_compra`, `id_usuario`, `id_paquete`, `fecha_compra`, `
 (9, 5, 8, '2025-08-29', 'Pendiente', 1600.00),
 (10, 4, 10, '2025-08-30', 'Pagada', 1400.00);
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `destino`
---
 
 CREATE TABLE `destino` (
   `id_destino` int(11) NOT NULL,
@@ -65,9 +35,6 @@ CREATE TABLE `destino` (
   `tipo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `destino`
---
 
 INSERT INTO `destino` (`id_destino`, `nombre`, `pais`, `tipo`) VALUES
 (101, 'Machu Picchu', 'Perú', 'Histórico'),
@@ -81,11 +48,7 @@ INSERT INTO `destino` (`id_destino`, `nombre`, `pais`, `tipo`) VALUES
 (109, 'Islas Griegas', 'Grecia', 'Playa'),
 (110, 'Selva Amazónica', 'Brasil', 'Aventura');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `paquete`
---
 
 CREATE TABLE `paquete` (
   `id_paquete` int(11) NOT NULL,
@@ -101,9 +64,6 @@ CREATE TABLE `paquete` (
   `estado` enum('Disponible','No disponible') NOT NULL DEFAULT 'Disponible'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `paquete`
---
 
 INSERT INTO `paquete` (`id_paquete`, `id_destino`, `nombre`, `descripcion`, `precio`, `duracion_dias`, `categoria`, `fecha_salida`, `fecha_regreso`, `promocion_activa`, `estado`) VALUES
 (1, 101, 'Aventura en Machu Picchu', 'Paquete con excursiones guiadas por Cusco y Machu Picchu', 1200.00, 7, 'Aventura', '2025-10-01', '2025-10-08', 1, 'No disponible'),
@@ -117,20 +77,13 @@ INSERT INTO `paquete` (`id_paquete`, `id_destino`, `nombre`, `descripcion`, `pre
 (9, 109, 'Islas Griegas', 'Tour en barco por Santorini, Mykonos y Atenas', 2800.00, 9, 'Playa', '2025-07-15', '2025-07-24', 1, 'No disponible'),
 (10, 110, 'Selva Amazónica', 'Exploración de la selva con guías locales y hospedaje ecológico', 1400.00, 5, 'Aventura', '2025-08-05', '2025-08-10', 0, 'No disponible');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `paquete_proveedor`
---
 
 CREATE TABLE `paquete_proveedor` (
   `id_paquete` int(11) NOT NULL,
   `id_proveedor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `paquete_proveedor`
---
+
 
 INSERT INTO `paquete_proveedor` (`id_paquete`, `id_proveedor`) VALUES
 (1, 1),
@@ -145,20 +98,14 @@ INSERT INTO `paquete_proveedor` (`id_paquete`, `id_proveedor`) VALUES
 (9, 2),
 (10, 5);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `paquete_servicio`
---
 
 CREATE TABLE `paquete_servicio` (
   `id_servicio` int(11) NOT NULL,
   `id_paquete` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `paquete_servicio`
---
+
 
 INSERT INTO `paquete_servicio` (`id_servicio`, `id_paquete`) VALUES
 (1, 1),
@@ -175,11 +122,7 @@ INSERT INTO `paquete_servicio` (`id_servicio`, `id_paquete`) VALUES
 (5, 3),
 (5, 8);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `promocion`
---
 
 CREATE TABLE `promocion` (
   `id_promocion` int(11) NOT NULL,
@@ -190,9 +133,7 @@ CREATE TABLE `promocion` (
   `fecha_fin` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `promocion`
---
+
 
 INSERT INTO `promocion` (`id_promocion`, `id_paquete`, `tipo`, `precio`, `fecha_inicio`, `fecha_fin`) VALUES
 (1, 1, 'Descuento', 1000.00, '2025-09-01', '2025-09-30'),
@@ -206,11 +147,7 @@ INSERT INTO `promocion` (`id_promocion`, `id_paquete`, `tipo`, `precio`, `fecha_
 (9, 9, '2x1', 2500.00, '2025-07-01', '2025-07-20'),
 (10, 10, 'Oferta Especial', 1200.00, '2025-08-01', '2025-08-15');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `proveedor`
---
 
 CREATE TABLE `proveedor` (
   `id_proveedor` int(11) NOT NULL,
@@ -219,9 +156,6 @@ CREATE TABLE `proveedor` (
   `tipo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `proveedor`
---
 
 INSERT INTO `proveedor` (`id_proveedor`, `nombre`, `stock_disponible`, `tipo`) VALUES
 (1, 'Proveedor A', 100, 'Transporte'),
@@ -235,11 +169,6 @@ INSERT INTO `proveedor` (`id_proveedor`, `nombre`, `stock_disponible`, `tipo`) V
 (9, 'Proveedor I', 90, 'Transporte interno'),
 (10, 'Proveedor J', 110, 'Experiencias culturales');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `servicio`
---
 
 CREATE TABLE `servicio` (
   `id_servicio` int(11) NOT NULL,
@@ -247,9 +176,6 @@ CREATE TABLE `servicio` (
   `descripcion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `servicio`
---
 
 INSERT INTO `servicio` (`id_servicio`, `nombre`, `descripcion`) VALUES
 (1, 'Traslados', 'Incluye transporte desde y hacia el aeropuerto'),
@@ -263,11 +189,7 @@ INSERT INTO `servicio` (`id_servicio`, `nombre`, `descripcion`) VALUES
 (9, 'Transporte interno', 'Buses y trenes para traslados dentro del destino'),
 (10, 'Experiencias culturales', 'Shows, eventos y actividades locales');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `usuario`
---
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
@@ -277,9 +199,7 @@ CREATE TABLE `usuario` (
   `edad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `usuario`
---
+
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `email`, `telefono`, `edad`) VALUES
 (1, 'Juan Pérez', 'juan.perez@example.com', '3512345678', 30),
@@ -293,84 +213,47 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `email`, `telefono`, `edad`) VALU
 (9, 'Martín Castro', 'martin.castro@example.com', '1198765432', 32),
 (10, 'Camila Díaz', 'camila.diaz@example.com', '1112345678', 26);
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `compra`
---
 ALTER TABLE `compra`
   ADD PRIMARY KEY (`id_compra`);
 
---
--- Indices de la tabla `destino`
---
 ALTER TABLE `destino`
   ADD PRIMARY KEY (`id_destino`);
 
---
--- Indices de la tabla `paquete`
---
+
 ALTER TABLE `paquete`
   ADD PRIMARY KEY (`id_paquete`);
 
---
--- Indices de la tabla `paquete_proveedor`
---
+
 ALTER TABLE `paquete_proveedor`
   ADD PRIMARY KEY (`id_paquete`,`id_proveedor`),
   ADD KEY `fk_pp_proveedor` (`id_proveedor`);
 
---
--- Indices de la tabla `paquete_servicio`
---
+
 ALTER TABLE `paquete_servicio`
   ADD PRIMARY KEY (`id_servicio`,`id_paquete`);
 
---
--- Indices de la tabla `promocion`
---
 ALTER TABLE `promocion`
   ADD PRIMARY KEY (`id_promocion`),
   ADD KEY `fk_promocion_paquete` (`id_paquete`);
 
---
--- Indices de la tabla `proveedor`
---
+
 ALTER TABLE `proveedor`
   ADD PRIMARY KEY (`id_proveedor`);
 
---
--- Indices de la tabla `servicio`
---
+
 ALTER TABLE `servicio`
   ADD PRIMARY KEY (`id_servicio`);
 
---
--- Indices de la tabla `usuario`
---
+
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usuario`);
 
---
--- Restricciones para tablas volcadas
---
 
---
--- Filtros para la tabla `paquete_proveedor`
---
 ALTER TABLE `paquete_proveedor`
   ADD CONSTRAINT `fk_pp_paquete` FOREIGN KEY (`id_paquete`) REFERENCES `paquete` (`id_paquete`),
   ADD CONSTRAINT `fk_pp_proveedor` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`);
 
---
--- Filtros para la tabla `promocion`
---
 ALTER TABLE `promocion`
   ADD CONSTRAINT `fk_promocion_paquete` FOREIGN KEY (`id_paquete`) REFERENCES `paquete` (`id_paquete`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
