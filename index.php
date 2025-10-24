@@ -1,10 +1,6 @@
 <?php
 require_once "componentes/conexion.php";
-$paquetes = $conexion->query(query: "
-SELECT * 
-FROM la_banda.paquetes
-WHERE paquete.estado = 'disponible';
-");
+$paquetes = $conexion->query("SELECT * FROM la_banda");
 
 ?>
 <!DOCTYPE html>
