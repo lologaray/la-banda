@@ -50,6 +50,7 @@ $paquetes = $conexion->query("SELECT * FROM la_banda");
     <section id="services">
       <h2>Principales servicios de M Viajes</h2>
       <div class="services-grid">
+        <
         <article class="service-card">
           <h3>Viaje a Europa</h3>
           <p>Incluye vuelos, hoteles 4 estrellas, tours guiados por París, Roma y Barcelona.</p>
