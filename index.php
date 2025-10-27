@@ -57,6 +57,7 @@ WHERE estado = 'Disponible';
   <div class="services-grid">
     <?php while($row = $paquetes->fetch_assoc()): ?>
       <article class="service-card">
+        <img src="https://picsum.photos/300/200?random=<?= $row['id_paquete'] ?>" alt="Imagen de <?= htmlspecialchars($row['nombre']) ?>">
         <h3><?= htmlspecialchars($row['nombre']) ?></h3>
         <p><?= htmlspecialchars($row['descripcion']) ?></p>
         <span class="price">USD <?= number_format($row['precio'], 2) ?></span>
