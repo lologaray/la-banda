@@ -66,7 +66,7 @@ CREATE TABLE `paquete` (
 
 
 INSERT INTO `paquete` (`id_paquete`, `id_destino`, `nombre`, `descripcion`, `precio`, `duracion_dias`, `categoria`, `fecha_salida`, `fecha_regreso`, `promocion_activa`, `estado`) VALUES
-(1, 101, 'Aventura en Machu Picchu', 'Paquete con excursiones guiadas por Cusco y Machu Picchu', 1200.00, 7, 'Aventura', '2025-10-01', '2025-10-08', 1, 'No disponible'),
+(1, 101, 'Aventura en malvinas', 'Paquete con excursiones guiadas por Cusco y Machu Picchu', 1200.00, 7, 'Aventura', '2025-10-01', '2025-10-08', 1, 'No disponible'),
 (2, 102, 'Playas de Cancún', 'Vacaciones todo incluido en hotel 5 estrellas frente al mar', 1500.00, 5, 'Playa', '2025-11-15', '2025-11-20', 1, 'Disponible'),
 (3, 103, 'Safari en Kenia', 'Experiencia única con safaris en la reserva Masái Mara', 3500.00, 10, 'Safari', '2025-09-20', '2025-09-30', 0, 'No disponible'),
 (4, 104, 'Turismo en París', 'Visita a la Torre Eiffel, Louvre y recorridos por la ciudad', 2000.00, 6, 'Cultural', '2025-12-05', '2025-12-11', 1, 'Disponible'),
