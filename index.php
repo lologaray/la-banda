@@ -53,31 +53,20 @@ WHERE estado = 'Disponible';
     </section>
 
     <section id="services">
-      <h2>Principales servicios de M Viajes</h2>
-      <div class="services-grid">
-        <
-        <article class="service-card">
-          <h3>Viaje a Europa</h3>
-          <p>Incluye vuelos, hoteles 4 estrellas, tours guiados por París, Roma y Barcelona.</p>
-          <span class="price">USD 2.500</span>
-          <button onclick="addToCart('Viaje a Europa', 2500)">Agregar al carrito</button>
-        </article>
-
-        <article class="service-card">
-          <h3>Caribe todo incluido</h3>
-          <p>7 noches en resort frente al mar, comidas y bebidas ilimitadas, excursiones opcionales.</p>
-          <span class="price">USD 1.800</span>
-          <button onclick="addToCart('Caribe todo incluido', 1800)">Agregar al carrito</button>
-        </article>
-
-        <article class="service-card">
-          <h3>Aventura en Asia</h3>
-          <p>Explora Tailandia, Japón y Vietnam con guías locales y experiencias auténticas.</p>
-          <span class="price">USD 3.200</span>
-          <button onclick="addToCart('Aventura en Asia', 3200)">Agregar al carrito</button>
-        </article>
-      </div>
-    </section>
+  <h2>Paquetes disponibles</h2>
+  <div class="services-grid">
+    <?php while($row = $paquetes->fetch_assoc()): ?>
+      <article class="service-card">
+        <h3><?= htmlspecialchars($row['nombre']) ?></h3>
+        <p><?= htmlspecialchars($row['descripcion']) ?></p>
+        <span class="price">USD <?= number_format($row['precio'], 2) ?></span>
+        <button onclick="addToCart('<?= addslashes($row['nombre']) ?>', <?= $row['precio'] ?>)">
+          Agregar al carrito
+        </button>
+      </article>
+    <?php endwhile; ?>
+  </div>
+</section>
 
     <section class="centered-content">
       <button onclick="toggleInfo()">Más información</button>
