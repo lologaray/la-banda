@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nosotros - M Viajes</title>
   <link rel="stylesheet" href="styles.css" />
+
   <style>
     :root {
       --color-primary: darkolivegreen;
@@ -12,73 +13,98 @@
       --color-background: #fdf6e3;
       --color-light: #fff;
       --color-dark: #333;
+      --font-family-base: Arial, sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
       background-color: var(--color-background);
+      font-family: var(--font-family-base);
       color: var(--color-dark);
       margin: 0;
-      line-height: 1.6;
+      padding: 0;
     }
 
     header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       background-color: var(--color-primary);
       color: var(--color-light);
-      text-align: center;
-      padding: 60px 20px;
+      padding: 20px 0;
+    }
+
+    .logo-container {
+      position: absolute;
+      left: 20px;
+    }
+
+    .logo-img {
+      width: 60px;
+      height: auto;
+    }
+
+    header .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-style: italic;
     }
 
     nav {
-      background-color: var(--color-light);
-      text-align: center;
+      background-color: var(--color-secondary);
       padding: 10px;
-      border-bottom: 2px solid var(--color-secondary);
+      text-align: center;
     }
 
     nav a {
-      color: var(--color-primary);
-      margin: 0 15px;
+      color: var(--color-light);
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px 15px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: var(--color-primary);
     }
 
     main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    h2 {
-      color: var(--color-primary);
-      border-left: 4px solid var(--color-secondary);
-      padding-left: 10px;
+    h1, h2 {
+      text-align: center;
       margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
     }
 
     .hero-img {
+      display: block;
+      margin: 30px auto;
       width: 100%;
+      max-width: 600px;
+      height: auto;
       border-radius: 8px;
-      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    button {
-      background-color: var(--color-primary);
-      color: var(--color-light);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      margin-top: 20px;
-    }
-
-    button:hover {
-      background-color: var(--color-secondary);
+    .centered-content {
+      text-align: center;
+      margin: 40px 0;
     }
 
     footer {
@@ -90,11 +116,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>Sobre Nosotros</h1>
-    <p>Conocé quiénes somos y por qué amamos lo que hacemos</p>
+    <div class="logo-container">
+      <img src="02202fb1-db80-454d-ae25-5203c310d13b.png" alt="Logo M Viajes" class="logo-img">
+    </div>
+    <h1 class="logo">M Viajes</h1>
+    <p>"Explora el mundo con confianza"</p>
   </header>
 
   <nav>
@@ -104,37 +134,48 @@
   </nav>
 
   <main>
-    <section>
-      <h2>Nuestra historia</h2>
-      <p>
-        M Viajes nació en 2023 con el propósito de acercar a las personas al placer de viajar.  
-        Somos una agencia joven, formada por profesionales con experiencia en turismo y atención personalizada.  
-        Creemos que viajar no es solo moverse de un lugar a otro, sino descubrir, aprender y disfrutar cada paso.
+    <section id="about">
+      <h2>Quiénes Somos</h2>
+      <p class="section-description">
+        M Viajes es una agencia de viajes internacional creada en 2023 por un equipo joven que comparte una misma pasión: 
+        ayudar a las personas a descubrir el mundo de una forma simple, segura y auténtica.  
+        Aunque somos nuevos en el rubro, combinamos entusiasmo con un enfoque profesional que prioriza la atención personalizada.
       </p>
-      <img src="https://picsum.photos/900/400?travel,team" alt="Equipo M Viajes" class="hero-img">
+      <img src="https://picsum.photos/700/400?travel,team" alt="Equipo de M Viajes" class="hero-img">
     </section>
 
-    <section>
-      <h2>Cómo trabajamos</h2>
-      <p>
-        Acompañamos a cada viajero en todo el proceso: desde la elección del destino hasta el regreso a casa.  
-        Diseñamos experiencias flexibles, adaptadas a cada presupuesto y estilo.  
-        Nuestra prioridad es que te sientas seguro, tranquilo y entusiasmado por tu próxima aventura.
+    <section id="vision">
+      <h2>Nuestro Propósito</h2>
+      <p class="section-description">
+        Nos mueve la idea de que cada viaje puede transformar una vida.  
+        Diseñamos experiencias a medida, seleccionando destinos, hospedajes y actividades que reflejan el estilo y los sueños de cada cliente.  
+        Desde escapadas cortas hasta viajes internacionales completos, acompañamos cada paso del proceso con dedicación.
       </p>
     </section>
 
-    <section>
-      <h2>Nuestro enfoque</h2>
-      <p>
-        Apostamos por un turismo responsable, que valore las culturas locales y cuide los entornos naturales.  
-        Trabajamos con aliados y proveedores confiables en distintos países para garantizar calidad y compromiso.
+    <section id="diferencia">
+      <h2>Qué Nos Distingue</h2>
+      <p class="section-description">
+        No buscamos ser la agencia más grande, sino la más cercana.  
+        En M Viajes cada viajero cuenta: respondemos con rapidez, cuidamos los detalles y ofrecemos opciones honestas.  
+        Además, trabajamos con proveedores de confianza que comparten nuestros valores de transparencia y responsabilidad.
       </p>
-      <img src="https://picsum.photos/900/350?airplane,landscape" alt="Viajes M Viajes" class="hero-img">
+      <img src="https://picsum.photos/800/350?airplane,landscape" alt="Viajes internacionales" class="hero-img">
     </section>
 
-    <section style="text-align:center;">
-      <h2>Tu próximo destino te espera</h2>
-      <p>Estamos listos para ayudarte a planificarlo.</p>
+    <section id="sostenible">
+      <h2>Turismo Responsable</h2>
+      <p class="section-description">
+        Promovemos un turismo que valore las culturas locales y respete el medio ambiente.  
+        Elegimos rutas sostenibles y colaboramos con proyectos que generan un impacto positivo en las comunidades que visitamos.
+      </p>
+    </section>
+
+    <section class="centered-content">
+      <h2>Tu Próxima Aventura Empieza Aquí</h2>
+      <p class="section-description">
+        Ya sea tu primer viaje o una nueva experiencia, queremos acompañarte en el camino.
+      </p>
       <button onclick="window.location.href='index.php'">Volver al inicio</button>
     </section>
   </main>
