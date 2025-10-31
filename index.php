@@ -38,6 +38,7 @@ WHERE estado = 'Disponible';
   </div>
 
   <nav>
+    
     <a href="sobre-nosotros.html">Sobre Nosotros</a>
     <a href="#services">Servicios</a>
     <a href="#contact">Contacto</a>
@@ -134,7 +135,7 @@ WHERE estado = 'Disponible';
     }
   }
 
-  // cerrar carrito al hacer clic fuera
+ 
   window.addEventListener('click', (e) => {
     if (!cartModal.contains(e.target) && !cartIcon.contains(e.target)) {
       cartModal.style.display = 'none';
