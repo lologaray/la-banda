@@ -42,6 +42,7 @@ WHERE estado = 'Disponible';
     <a href="sobre-nosotros.html">Sobre Nosotros</a>
     <a href="#services">Servicios</a>
     <a href="#contact">Contacto</a>
+    <a href="detalle">detalle</a>
   </nav>
 
   <main>
