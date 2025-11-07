@@ -1,0 +1,136 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* ====== ENCABEZADO ====== */
+  header {
+    background-color: #0b4f6c;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header .logo-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    margin: 0.3em 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  header p {
+    font-style: italic;
+    font-size: 1rem;
+    color: #dce3e7;
+  }
+  
+  /* ====== CONTENEDOR PRINCIPAL ====== */
+  main {
+    max-width: 1000px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== DETALLE DEL PAQUETE ====== */
+  .paquete-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2em;
+  }
+  
+  .paquete-detalle img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .paquete-info {
+    flex: 1;
+  }
+  
+  .paquete-info h2 {
+    font-size: 1.8rem;
+    color: #0b4f6c;
+    margin-bottom: 0.5em;
+  }
+  
+  .paquete-info p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+  
+  .paquete-info .precio {
+    font-size: 1.4rem;
+    color: #007b4f;
+    font-weight: bold;
+  }
+  
+  .paquete-info .duracion {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* ====== BOTONES ====== */
+  .btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: #0b4f6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    background-color: #0978a1;
+  }
+  
+  /* ====== ALERTAS ====== */
+  .alert {
+    margin: 3em auto;
+    width: 80%;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .alert-danger {
+    background-color: #ffe5e5;
+    color: #a10000;
+    border: 1px solid #ffb3b3;
+  }
+  
+  .alert-warning {
+    background-color: #fff7e5;
+    color: #a16200;
+    border: 1px solid #ffd280;
+  }
+  
+  /* ====== FOOTER ====== */
+  footer {
+    background-color: #0b4f6c;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 3em;
+    font-size: 0.9rem;
+  }
+  
