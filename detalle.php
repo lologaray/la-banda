@@ -32,7 +32,7 @@ if ($id_paquete > 0) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($paquete['nombre']) ?> - Detalle del Paquete | M Viajes</title>
-  <link rel="stylesheet" href="styles_detalle.css">
+  <link rel="stylesheet" href="style_detalle.css">
 </head>
 <body>
 
