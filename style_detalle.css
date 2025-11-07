@@ -1,4 +1,4 @@
-/* ====== ESTILOS GENERALES ====== */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f7fa;
@@ -7,7 +7,7 @@ body {
     color: #333;
   }
   
-  /* ====== ENCABEZADO ====== */
+ 
   header {
     background-color: #0b4f6c;
     color: white;
@@ -34,7 +34,7 @@ body {
     color: #dce3e7;
   }
   
-  /* ====== CONTENEDOR PRINCIPAL ====== */
+ 
   main {
     max-width: 1000px;
     margin: 2em auto;
@@ -43,8 +43,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  
-  /* ====== DETALLE DEL PAQUETE ====== */
+
   .paquete-detalle {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +85,7 @@ body {
     color: #555;
   }
   
-  /* ====== BOTONES ====== */
+  
   .btn {
     display: inline-block;
     padding: 0.8em 1.5em;
@@ -102,7 +101,7 @@ body {
     background-color: #0978a1;
   }
   
-  /* ====== ALERTAS ====== */
+  
   .alert {
     margin: 3em auto;
     width: 80%;
@@ -124,7 +123,7 @@ body {
     border: 1px solid #ffd280;
   }
   
-  /* ====== FOOTER ====== */
+
   footer {
     background-color: #0b4f6c;
     color: white;
