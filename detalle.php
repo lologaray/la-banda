@@ -19,12 +19,7 @@ if ($id_paquete > 0) {
         exit;
     }
 
-} else {
-    echo "<div class='alert alert-warning text-center mt-5'>
-            ID de paquete no válido.
-          </div>";
-    exit;
-}
+} 
 ?>
 <!DOCTYPE html>
 <html lang="es">

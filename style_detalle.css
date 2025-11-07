@@ -1,23 +1,35 @@
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fa;
+:root {
+    --color-primary: darkolivegreen;
+    --color-secondary: olive;
+    --color-background: #fdf6e3;
+    --color-light: #fff;
+    --color-dark: #333;
+    --color-accent: #007b4f;
+    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+  body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--color-dark);
   }
   
  
   header {
-    background-color: #0b4f6c;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-light);
     text-align: center;
     padding: 1.5em 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
   }
   
   header .logo-img {
-    width: 100px;
+    width: 90px;
     height: auto;
     border-radius: 8px;
   }
@@ -31,19 +43,20 @@ body {
   header p {
     font-style: italic;
     font-size: 1rem;
-    color: #dce3e7;
+    color: #e6e6d2;
   }
   
- 
+  
   main {
     max-width: 1000px;
     margin: 2em auto;
-    background-color: #fff;
+    background-color: var(--color-light);
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-
+  
+  
   .paquete-detalle {
     display: flex;
     flex-wrap: wrap;
@@ -65,7 +78,7 @@ body {
   
   .paquete-info h2 {
     font-size: 1.8rem;
-    color: #0b4f6c;
+    color: var(--color-primary);
     margin-bottom: 0.5em;
   }
   
@@ -76,7 +89,7 @@ body {
   
   .paquete-info .precio {
     font-size: 1.4rem;
-    color: #007b4f;
+    color: var(--color-secondary);
     font-weight: bold;
   }
   
@@ -89,8 +102,8 @@ body {
   .btn {
     display: inline-block;
     padding: 0.8em 1.5em;
-    background-color: #0b4f6c;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-light);
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s ease;
@@ -98,7 +111,7 @@ body {
   }
   
   .btn:hover {
-    background-color: #0978a1;
+    background-color: var(--color-secondary);
   }
   
   
@@ -123,13 +136,25 @@ body {
     border: 1px solid #ffd280;
   }
   
-
+  
   footer {
-    background-color: #0b4f6c;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-light);
     text-align: center;
     padding: 1em 0;
     margin-top: 3em;
     font-size: 0.9rem;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .paquete-detalle {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .paquete-info {
+      text-align: center;
+    }
   }
   
