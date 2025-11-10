@@ -9,7 +9,7 @@ WHERE estado = 'Disponible';
 ");
 
 if ($_SESSION['userid']){
-    echo 'hola' . ($_SESSION['nombre']) .;
+    echo 'hola' . ($_SESSION['nombre']) ;
 } else {
     echo "<a href='login.php'>Iniciar Sesión</a>";
 }
