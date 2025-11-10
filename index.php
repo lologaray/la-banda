@@ -1,4 +1,6 @@
 <?php
+
+
 require_once "componentes/conexion.php";
 $paquetes = $conexion->query("
 SELECT * 
