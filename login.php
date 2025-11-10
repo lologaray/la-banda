@@ -1,23 +1,23 @@
 <?php
-  require_once 'componente/conexion.php';
-  
-  
-  if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
-      $errores = '';
-      $correo = $conexion->real_escape_string($_POST['nombre-usuario'] ?? '');
-      $contraseña = $conexion->real_escape_string($_POST['contraseña'] ?? '');
-    
-      if (empty($correo) || empty($contraseña)) {
-          $errores .= "<div class='alert alert-danger'>Por favor complete todos los campos.</div>";
-      } else {
-        $frase = $conexion->prepare(query: "SELECT* FROM usuario WHERE usuario.email = ? ");
-        $frase->bind_param(types: "s", $correo);
+require_once 'componente/conexion.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
+    $errores = '';
+    $correo = $conexion->real_escape_string($_POST['nombre-usuario'] ?? '');
+    $contraseña = $conexion->real_escape_string($_POST['contraseña'] ?? '');
+
+    if (empty($correo) || empty($contraseña)) {
+        $errores .= "<div class='alert alert-danger'>Por favor complete todos los campos.</div>";
+    } else {
+        
+        $frase = $conexion->prepare("SELECT * FROM usuario WHERE usuario.email = ?");
+        $frase->bind_param("s", $correo);
         $frase->execute();
 
         $usuario = $frase->get_result()->fetch_assoc();
 
-        if($usuario){
-            if(password_verify($contraseña, $usuario['contraseña'])){
+        if ($usuario) {
+            if (password_verify($contraseña, $usuario['contraseña'])) {
                 session_start();
                 $_SESSION['userid'] = $usuario['id_usuario'];
                 $_SESSION['rol'] = $usuario['rol'];
@@ -25,20 +25,19 @@
 
                 $conexion->close();
 
-                header(location: 'index.php');
+              
+                header("Location: index.php");
                 exit();
             } else {
-                $errores .= "<div class='alert alert-danger'> correo o contraseña incorrecta.</div";
+                
+                $errores .= "<div class='alert alert-danger'>Correo o contraseña incorrecta.</div>";
             }
         } else {
-            $errores .= "<div class='alert alert-danger'> correo o contraseña incorrecta.</div";
+            $errores .= "<div class='alert alert-danger'>Correo o contraseña incorrecta.</div>";
         }
-              
-  }
+    }
+}
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,15 +51,12 @@
     <form method="POST" action="login.php">
         
     </form>
-     <?php require_once 'componentes/comp-form-ligin.php'; ?>
+
+    <?php require_once 'componentes/comp-form-ligin.php'; ?>
 
     <div>
-        <p>¿no tienes usuario? Registrate: <a href="registro.php">aquí></a></p>    
+        <p>¿no tienes usuario? Registrate: <a href="registro.php">aquí</a></p>    
     </div>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
