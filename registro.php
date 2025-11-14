@@ -1,9 +1,5 @@
 <?php
-
-use function PHPSTORM_META\type;
-
      require_once 'componentes/conexion.php';
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
       $errores = '';
@@ -36,8 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
                 $errores .= "<div class='alert alert-danger'> Error en BBD,pruebe mas tarde.</div>";
             }
         
-        
-
       }
     
     }   
