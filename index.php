@@ -1,6 +1,6 @@
 <?php
 session_start()
-require_once "componentes/conexion.php";
+require_once 'componentes/conexion.php';
 
 $paquetes = $conexion->query("
 SELECT * 
