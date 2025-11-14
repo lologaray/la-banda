@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
         if (empty($errores)) {
             $contra_hash = password_hash(password: $contraseña, algo: PASSWORD_BCRYPT);
             $query = $conexion->prepare('INSERT INTO usuario (email, contraseña) VALUES (?, ?)');
-            $query->bind_param(type: 'ss', var: $correo, $contraseña);
+            $query->bind_param(type: 'ss', var: $correo, $contra_hash);
             $sentencia = $query->execute();
 
             $query->close();
