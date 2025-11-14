@@ -159,7 +159,7 @@ $paquetes = $conexion->query("
     const infoDiv = document.getElementById('additional-info');
     infoDiv.style.display = (infoDiv.style.display === 'block') ? 'none' : 'block';
   }
-
 </script>
+
 </body>
 </html>
