@@ -65,17 +65,19 @@ if ($_SESSION['userid']){
     <section id="services">
   <h2>Paquetes disponibles</h2>
   <div class="services-grid">
-    <?php while($row = $paquetes->fetch_assoc()): ?>
-      <article class="service-card">
-        <img src="https://picsum.photos/300/200?random=<?= $row['id_paquete'] ?>" alt="Imagen de <?= htmlspecialchars($row['nombre']) ?>">
-        <h3><?= htmlspecialchars($row['nombre']) ?></h3>
-        <p><?= htmlspecialchars($row['descripcion']) ?></p>
-        <span class="price">USD <?= number_format($row['precio'], 2) ?></span>
-        <button onclick="addToCart('<?= addslashes($row['nombre']) ?>', <?= $row['precio'] ?>)">
-          Agregar al carrito
-        </button>
-      </article>
-    <?php endwhile; ?>
+  <?php while($row = $paquetes->fetch_assoc()): ?>
+  <article class="service-card">
+    <img src="https://picsum.photos/300/200?random=<?= $row['id_paquete'] ?>" alt="Imagen de <?= htmlspecialchars($row['nombre']) ?>">
+    <h3><?= htmlspecialchars($row['nombre']) ?></h3>
+    <p><?= htmlspecialchars($row['descripcion']) ?></p>
+    <span class="price">USD <?= number_format($row['precio'], 2) ?></span>
+    <button onclick="addToCart('<?= addslashes($row['nombre']) ?>', <?= $row['precio'] ?>)">
+      Agregar al carrito
+    </button>
+    
+    <a href="detalle.php?id=<?= $row['id_paquete'] ?>">Ver detalle</a>
+  </article>
+<?php endwhile; ?> 
   </div>
 </section>
 
