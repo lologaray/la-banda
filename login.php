@@ -49,9 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
         <?php require_once 'componentes/comp-form-login.php'; ?>
     </form>
 
-    <div>
-        <p>¿No tienes usuario? Registrate: <a href="registro.php">aquí</a></p>    
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
