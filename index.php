@@ -30,20 +30,10 @@ if ($_SESSION['userid']){
   <div class="logo-container">
     <img src="02202fb1-db80-454d-ae25-5203c310d13b.png" alt="Logo M Viajes" class="logo-img">
   </div>
-  <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
   <h1 class="logo">M Viajes</h1>
   <p>"Explora el mundo, descubre tu próxima aventura"</p>
 </header>
 
-
-  <div id="cart-modal" class="cart-modal">
-    <h3>
-      Carrito de compras 
-      <span class="close-cart" onclick="toggleCart()">&times;</span>
-    </h3>
-    <ul id="cart-items"></ul>
-    <button onclick="clearCart()">Vaciar carrito</button>
-  </div>
 
   <nav>
     
@@ -71,10 +61,6 @@ if ($_SESSION['userid']){
     <h3><?= htmlspecialchars($row['nombre']) ?></h3>
     <p><?= htmlspecialchars($row['descripcion']) ?></p>
     <span class="price">USD <?= number_format($row['precio'], 2) ?></span>
-    <button onclick="addToCart('<?= addslashes($row['nombre']) ?>', <?= $row['precio'] ?>)">
-      Agregar al carrito
-    </button>
-    
     <a href="detalle.php?id=<?= $row['id_paquete'] ?>">Ver detalle</a>
   </article>
 <?php endwhile; ?> 
@@ -98,69 +84,11 @@ if ($_SESSION['userid']){
   </footer>
   
 <script>
-  let cart = [];
-
-  function addToCart(tripName, price) {
-    cart.push({ name: tripName, price: price });
-    updateCartUI();
-    toggleCart(true);
-  }
-
-  function updateCartUI() {
-    const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = ''; 
-    let total = 0;
-
-    cart.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = `${item.name} - USD ${item.price}`;
-      cartItems.appendChild(li);
-      total += item.price;
-    });
-
-    if (cart.length > 0) {
-      const totalLi = document.createElement('li');
-      totalLi.style.fontWeight = 'bold';
-      totalLi.textContent = `Total: USD ${total}`;
-      cartItems.appendChild(totalLi);
-    }
-  }
-
-  function clearCart() {
-    cart = [];
-    updateCartUI();
-  }
-
-  const cartIcon = document.querySelector('.cart-icon');
-  const cartModal = document.getElementById('cart-modal');
-
-  cartIcon.addEventListener('click', () => {
-    toggleCart();
-  });
-
-  function toggleCart(forceOpen = false) {
-    if (forceOpen) {
-      cartModal.style.display = 'block';
-    } else {
-      cartModal.style.display = (cartModal.style.display === 'block') ? 'none' : 'block';
-    }
-  }
-
- 
-  window.addEventListener('click', (e) => {
-    if (!cartModal.contains(e.target) && !cartIcon.contains(e.target)) {
-      cartModal.style.display = 'none';
-    }
-  });
-
   function toggleInfo() {
     const infoDiv = document.getElementById('additional-info');
     infoDiv.style.display = (infoDiv.style.display === 'block') ? 'none' : 'block';
   }
 </script>
 
-</body>
-</html>
-  
 </body>
 </html>
