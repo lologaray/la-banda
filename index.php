@@ -15,7 +15,7 @@ if ($_SESSION['userid']){
 }
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -45,7 +45,7 @@ if ($_SESSION['userid']){
 
   <main>
     <section id="about-us">
-      <h2>Sobre nuestra agencia</h2>
+      <h2>inicio</h2>
       <p class="section-description">M Viajes es una agencia especializada en viajes internacionales que te conecta con los destinos más fascinantes del planeta. Creamos experiencias únicas que van más allá del turismo convencional.</p>
       <p class="section-description">Con un equipo de expertos y una red global de socios, ofrecemos paquetes personalizados que se adaptan a tus gustos, tu presupuesto y tus sueños de viajar.</p>
       <p class="section-description">Ya sea que busques playas paradisíacas, ciudades vibrantes o aventuras culturales, M Viajes está aquí para hacer realidad ese viaje inolvidable.</p>
