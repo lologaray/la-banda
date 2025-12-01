@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
     </form>
 
     <div>
-        <p>¿No tenes un USUARIO?resgistrate aqui: <a href="resgistro.php">Aqui</a></p>
+        <p>¿No tenes un USUARIO?resgistrate aqui: <a href="registro.php">Aqui</a></p>
     </div>
 
 </body>
