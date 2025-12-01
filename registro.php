@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
             $errores .= "<div class='alert alert-danger'> El correo ya está registrado.</div>";
         }
         if (empty($errores)) {
-            $contra_hash = password_hash(password: $contraseña, algo: PASSWORD_BCRYPT);
+            $contra_hash = password_hash($contraseña, PASSWORD_BCRYPT);
             $query = $conexion->prepare('INSERT INTO usuario (email, contraseña) VALUES (?, ?)');
             $query->bind_param( 'ss', $correo, $contra_hash);
             $sentencia = $query->execute();
