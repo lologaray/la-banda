@@ -249,17 +249,7 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `contraseña`, `email`, `telefono`, `rol`, `edad`) VALUES
-(1, 'Juan Pérez', '1234', 'juan.perez@example.com', '3512345678', 'cliente', 30),
-(2, 'María González', 'abcd', 'maria.gonzalez@example.com', '3518765432', 'cliente', 28),
-(3, 'Carlos López', 'pass123', 'carlos.lopez@example.com', '1134567890', 'empleado', 35),
-(4, 'Ana Torres', 'admin2025', 'ana.torres@example.com', '1167891234', 'admin', 25),
-(5, 'Luis Fernández', 'xyz789', 'luis.fernandez@example.com', '1145678901', 'cliente', 40),
-(6, 'Laura Martínez', '3210', 'laura.martinez@example.com', '1123456789', 'cliente', 33),
-(7, 'Pedro Ramírez', 'pw2025', 'pedro.ramirez@example.com', '1178901234', 'empleado', 27),
-(8, 'Sofía Herrera', 'sh2025', 'sofia.herrera@example.com', '1187654321', 'cliente', 29),
-(9, 'Martín Castro', 'mc456', 'martin.castro@example.com', '1198765432', 'cliente', 32),
-(10, 'Camila Díaz', 'cd789', 'camila.diaz@example.com', '1112345678', 'cliente', 26);
+
 
 -- --------------------------------------------------------
 
