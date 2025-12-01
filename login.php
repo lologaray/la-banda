@@ -45,9 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
     <title>AGENCIA DE VIAJE - LOGIN</title>
 </head>
 <body>
-    <form method="POST" action="login.php">
-        <?php require_once 'componentes/comp-form-login.php'; ?>
-    </form>
+   
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
