@@ -25,6 +25,10 @@ if ($_SESSION['userid']){
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <?php 
+  if ($_SESSION)
+  
+  ?>
 
   <header>
   <div class="logo-container">
