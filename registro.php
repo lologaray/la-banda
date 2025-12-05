@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
                            </div>";
             }
             
+            
             } else {
                 $errores .= "<div class='alert alert-danger'> Error en BBD,pruebe mas tarde.</div>";
             }
@@ -38,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
       }
     
     }   
+
 ?>
 
 <!DOCTYPE html>
