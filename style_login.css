@@ -1,58 +1,65 @@
 :root {
-  --color-primary: darkolivegreen;      /* Verde principal */
-  --color-primary-dark: #3a4b2f;        /* Verde más oscuro */
+  --color-primary: darkolivegreen;
+  --color-primary-dark: #2f3b27;
   --color-secondary: olive;
-  --color-background: #f1f0e6;          /* Un beige un poco más oscuro */
+  --color-background: #f1f0e6;
   --color-light: #fff;
-  --color-dark: #222;                   /* Más oscuro para contraste */
-  --font-family-base: Arial, sans-serif;
+  --color-dark: #222;
+  --font-family-base: "Segoe UI", Arial, sans-serif;
 }
 
 /* Fondo general */
 body {
-  background-color: var(--color-background);
-  font-family: var(--font-family-base);
-  color: var(--color-dark);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
 
-  /* Agregamos un leve degradado verdoso */
+  /* Fondo más elegante */
   background: linear-gradient(
-    135deg,
-    #f5f3e7 0%,
-    #e8e6d4 40%,
-    #dce1c5 100%
+    120deg,
+    #ecead9 0%,
+    #dde2c7 40%,
+    #c8d2b4 100%
   );
 }
 
 /* Contenedor estilo tarjeta */
 .login-container {
-  background-color: var(--color-light);
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid var(--color-primary-dark);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  background: var(--color-light);
+  padding: 45px;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(47, 59, 39, 0.25);
+
+  box-shadow: 
+    0 12px 20px rgba(0,0,0,0.15),
+    0 2px 6px rgba(0,0,0,0.1);
+
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .login-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  transform: translateY(-5px);
+  box-shadow:
+    0 16px 28px rgba(0,0,0,0.18),
+    0 3px 8px rgba(0,0,0,0.12);
 }
 
 /* Título */
 .login-container h2 {
   color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-size: 1.9em;
+  font-weight: 700;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
@@ -60,20 +67,22 @@ body {
 .login-container input[type="text"],
 .login-container input[type="password"] {
   width: 100%;
-  padding: 12px 15px;
-  margin: 12px 0;
-  border: 1px solid var(--color-primary);
-  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 8px;
+
+  border: 1.8px solid rgba(85, 107, 47, 0.55);
+  background-color: #fbfbf7;
+
   font-size: 1em;
-  background-color: #f9f9f5;
-  color: var(--color-dark);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
   border-color: var(--color-primary-dark);
-  background-color: #f3f7ef;
+  background-color: #f2f5eb;
+  box-shadow: 0 0 6px rgba(47, 59, 39, 0.3);
   outline: none;
 }
 
@@ -81,19 +90,20 @@ body {
 .login-container input[type="submit"] {
   background: var(--color-primary-dark);
   color: var(--color-light);
-  padding: 12px 25px;
+  padding: 14px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1em;
-  margin-top: 18px;
   width: 100%;
-  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-size: 1.1em;
   font-weight: bold;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .login-container input[type="submit"]:hover {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 /* Enlaces */
@@ -101,8 +111,10 @@ body {
   color: var(--color-primary-dark);
   font-weight: bold;
   text-decoration: none;
+  margin-top: 14px;
   display: inline-block;
-  margin-top: 12px;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
 }
 
 .login-container a:hover {
@@ -110,19 +122,20 @@ body {
   text-decoration: underline;
 }
 
-/* Errores */
+/* Cuadro de errores */
 .alert {
-  padding: 12px 15px;
-  border-radius: 6px;
-  margin-bottom: 15px;
+  padding: 14px;
+  margin-bottom: 18px;
   background-color: rgba(176, 20, 20, 0.15);
-  border: 1px solid rgba(176, 20, 20, 0.35);
+  border-left: 4px solid rgba(176, 20, 20, 0.5);
+  border-radius: 6px;
   color: #611;
+  font-size: 0.95em;
 }
 
 /* Responsive */
 @media (max-width: 500px) {
   .login-container {
-    padding: 30px 20px;
+    padding: 32px 24px;
   }
 }
