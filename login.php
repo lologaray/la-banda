@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
         $frase->execute();
 
         $usuario = $frase->get_result()->fetch_assoc();
+        echo $usuario;
 
         if ($usuario) {
             if (password_verify($contraseña, $usuario['contraseña'])) {

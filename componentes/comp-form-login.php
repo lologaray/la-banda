@@ -3,5 +3,3 @@
 
         <label for="contraseña">contraseña</label>
         <input type="password" name="contraseña" id="contraseña" />
-
-        <input type="submit" value="Ingresar" />
