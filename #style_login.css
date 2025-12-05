@@ -1,0 +1,90 @@
+:root {
+  --color-primary: darkolivegreen;
+  --color-secondary: olive;
+  --color-background: #fdf6e3;
+  --color-light: #fff;
+  --color-dark: #333;
+  --font-family-base: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor del login */
+.login-container {
+  background-color: var(--color-light);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Botón ingresar */
+.login-container input[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Enlaces */
+.login-container a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Errores */
+.alert {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}
