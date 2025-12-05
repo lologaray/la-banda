@@ -1,13 +1,14 @@
 :root {
-  --color-primary: darkolivegreen;
+  --color-primary: darkolivegreen;      /* Verde principal */
+  --color-primary-dark: #3a4b2f;        /* Verde más oscuro */
   --color-secondary: olive;
-  --color-background: #fdf6e3;
+  --color-background: #f1f0e6;          /* Un beige un poco más oscuro */
   --color-light: #fff;
-  --color-dark: #333;
+  --color-dark: #222;                   /* Más oscuro para contraste */
   --font-family-base: Arial, sans-serif;
 }
 
-/* Fondo general coherente con el sitio */
+/* Fondo general */
 body {
   background-color: var(--color-background);
   font-family: var(--font-family-base);
@@ -18,95 +19,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  /* Agregamos un leve degradado verdoso */
+  background: linear-gradient(
+    135deg,
+    #f5f3e7 0%,
+    #e8e6d4 40%,
+    #dce1c5 100%
+  );
 }
 
-/* Contenedor del login con estilo de tarjetas del sitio */
+/* Contenedor estilo tarjeta */
 .login-container {
   background-color: var(--color-light);
   padding: 40px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
   width: 100%;
   max-width: 400px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.login-container:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-/* Título */
-.login-container h2 {
-  color: var(--color-primary);
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Inputs con estilo limpio */
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  font-size: 1em;
-  background-color: #fafafa;
-  transition: border-color 0.3s ease;
-}
-
-.login-container input[type="text"]:focus,
-.login-container input[type="password"]:focus {
-  border-color: var(--color-primary);
-  outline: none;
-}
-
-/* Botón principal con el estilo de los botones del sitio */
-.login-container input[type="submit"] {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 15px;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.login-container input[type="submit"]:hover {
-  background-color: var(--color-secondary);
-}
-
-/* Enlaces */
-.login-container a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-container a:hover {
-  text-decoration: underline;
-}
-
-/* Errores */
-.alert {
-  padding: 12px 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  background-color: #f8d7da;
-  border: 1px solid #d6b5b8;
-  color: #842029;
-  text-align: left;
-}
-
-/* Responsive */
-@media (max-width: 500px) {
-  .login-container {
-    padding: 30px 20px;
-  }
-}
+  text-align: c
