@@ -28,7 +28,7 @@ if ($_SESSION['userid']){
   <?php 
   if ($_SESSION['userid']){
     echo 'hola' . $_SESSION['nombre'];
-    echo '<a href="longout.php">CIERRE DE SESION</a>';
+    echo '<a href="logout.php">CIERRE DE SESION</a>';
   } else {
      echo '<a href="login.php">INICIO SESION</a>';
   }
