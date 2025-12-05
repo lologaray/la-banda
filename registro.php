@@ -26,8 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
             $conexion->close();
 
             if ($sentencia) {
-                $succes = "<div class='alert alert-success'> Registro exitoso. <a href='login.php'>Iniciar sesión</a></div>";
-                header("Location: index.php");
+                $succes = "<div class='alert alert-success'>
+                            Registro exitoso. <a href='login.php' class='alert-link'>Aquí para iniciar sesión</a>
+                           </div>";
+            }
+            
             } else {
                 $errores .= "<div class='alert alert-danger'> Error en BBD,pruebe mas tarde.</div>";
             }
@@ -35,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
       }
     
     }   
-}
 ?>
 
 <!DOCTYPE html>
