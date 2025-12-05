@@ -49,9 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ingresar'])) {
     <title>Registro</title>
 
 <style>
-/* ============================
-   VARIABLES Y ESTILO GLOBAL
-   ============================ */
+
 :root {
   --color-primary: darkolivegreen;
   --color-primary-dark: #3a4b2f;
@@ -74,9 +72,7 @@ body {
   min-height: 100vh;
 }
 
-/* ============================
-   CONTENEDOR DEL FORMULARIO
-   ============================ */
+
 .card {
   background-color: var(--color-light);
   padding: 40px;
@@ -103,9 +99,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ============================
-   INPUTS
-   ============================ */
+
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -125,9 +119,7 @@ input[type="password"]:focus {
   outline: none;
 }
 
-/* ============================
-   BOTÓN
-   ============================ */
+
 button,
 .btn-primary {
   background: var(--color-primary-dark);
@@ -148,9 +140,7 @@ button:hover,
   background-color: var(--color-primary);
 }
 
-/* ============================
-   ENLACES
-   ============================ */
+
 a {
   color: var(--color-primary-dark);
   text-decoration: none;
@@ -162,9 +152,6 @@ a:hover {
   color: var(--color-primary);
 }
 
-/* ============================
-   ALERTAS
-   ============================ */
 .alert {
   padding: 12px 15px;
   border-radius: 6px;
@@ -194,13 +181,12 @@ a:hover {
 
 <body>
 
-    <!-- Mostrar errores -->
+    
     <?php if (!empty($errores)) echo $errores; ?>
 
-    <!-- Mostrar éxito -->
     <?php if (!empty($succes)) echo $succes; ?>
 
-    <!-- Formulario de registro -->
+    
     <div class="card">
         <h2>Crear cuenta</h2>
 
