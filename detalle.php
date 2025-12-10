@@ -8,7 +8,7 @@ if ($id <= 0) {
     exit;
 }
 
-// Traer paquete + destino + categoría + promoción
+
 $paquete = $conexion->query("
     SELECT p.*, 
            d.nombres AS destino,
