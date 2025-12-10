@@ -1,160 +1,151 @@
 
-:root {
+   :root {
     --color-primary: darkolivegreen;
     --color-secondary: olive;
     --color-background: #fdf6e3;
     --color-light: #fff;
     --color-dark: #333;
-    --color-accent: #007b4f;
-    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-base: Arial, sans-serif;
   }
-  
   
   body {
-    font-family: var(--font-family-base);
     background-color: var(--color-background);
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
     margin: 0;
     padding: 0;
-    color: var(--color-dark);
   }
   
- 
-  header {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    text-align: center;
-    padding: 1.5em 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  header .logo-img {
-    width: 90px;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  header h1 {
-    margin: 0.3em 0;
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-  
-  header p {
-    font-style: italic;
-    font-size: 1rem;
-    color: #e6e6d2;
-  }
-  
-  
+
   main {
-    max-width: 1000px;
-    margin: 2em auto;
+    padding: 25px;
+    max-width: 1100px;
+    margin: 30px auto;
     background-color: var(--color-light);
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   
   
-  .paquete-detalle {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 2em;
-  }
-  
-  .paquete-detalle img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  .paquete-info {
-    flex: 1;
-  }
-  
-  .paquete-info h2 {
-    font-size: 1.8rem;
+  h1 {
+    text-align: center;
     color: var(--color-primary);
-    margin-bottom: 0.5em;
+    margin-bottom: 25px;
+  }
+  
+
+  .paquete-info {
+    text-align: center;
+    margin-bottom: 40px;
   }
   
   .paquete-info p {
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 1em;
+    margin: 8px 0;
   }
   
-  .paquete-info .precio {
-    font-size: 1.4rem;
-    color: var(--color-secondary);
+  .paquete-info strong {
+    color: var(--color-primary);
+  }
+  
+  /* Precio destacado */
+  .precio-destacado {
+    display: inline-block;
+    background: var(--color-secondary);
+    color: var(--color-light);
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-size: 1.4em;
     font-weight: bold;
   }
   
-  .paquete-info .duracion {
-    font-size: 1rem;
-    color: #555;
+ 
+  .section-card {
+    background-color: var(--color-light);
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .section-card h3 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.5em;
   }
   
   
-  .btn {
-    display: inline-block;
-    padding: 0.8em 1.5em;
+   
+  .servicios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .servicios-lista li {
+    background-color: var(--color-light);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servicios-lista li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .servicios-lista strong {
+    color: var(--color-primary);
+    font-size: 1.2em;
+  }
+  
+  .servicios-lista .precio-servicio {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin: 10px 0;
+  }
+  
+ 
+  .btn-volver {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
     background-color: var(--color-primary);
     color: var(--color-light);
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
   }
   
-  .btn:hover {
+  .btn-volver:hover {
     background-color: var(--color-secondary);
   }
   
   
-  .alert {
-    margin: 3em auto;
-    width: 80%;
-    padding: 1em;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .alert-danger {
-    background-color: #ffe5e5;
-    color: #a10000;
-    border: 1px solid #ffb3b3;
-  }
-  
-  .alert-warning {
-    background-color: #fff7e5;
-    color: #a16200;
-    border: 1px solid #ffd280;
-  }
-  
-  
-  footer {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 3em;
-    font-size: 0.9rem;
-  }
-  
- 
   @media (max-width: 768px) {
-    .paquete-detalle {
+    .servicios-lista {
       flex-direction: column;
       align-items: center;
     }
   
-    .paquete-info {
-      text-align: center;
+    main {
+      margin: 10px;
+      padding: 15px;
     }
   }
   
