@@ -1,151 +1,150 @@
+:root {
+  --color-primary: #4a7c59;      /* Verde oliva moderno */
+  --color-secondary: #88a096;    /* Verde gris suave */
+  --color-background: #f2f2eb;   /* Beige suave */
+  --color-light: #ffffff;
+  --color-dark: #2b2b2b;
+  --color-accent: #d4a373;       /* Dorado suave */
+  --font-family-base: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+}
 
-   :root {
-    --color-primary: darkolivegreen;
-    --color-secondary: olive;
-    --color-background: #fdf6e3;
-    --color-light: #fff;
-    --color-dark: #333;
-    --font-family-base: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: var(--color-background);
-    font-family: var(--font-family-base);
-    color: var(--color-dark);
-    margin: 0;
-    padding: 0;
-  }
-  
+/* -------- GENERAL ---------- */
 
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  color: var(--color-dark);
+}
+
+/* -------- CONTENEDOR PRINCIPAL ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 2.5em auto;
+  padding: 2.5em;
+  background-color: var(--color-light);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* -------- TÍTULO ---------- */
+
+h1 {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+  letter-spacing: .5px;
+}
+
+/* -------- INFO DEL PAQUETE ---------- */
+
+.paquete-info p {
+  font-size: 1.05rem;
+  margin: .6em 0;
+  line-height: 1.6;
+}
+
+.paquete-info strong {
+  color: var(--color-primary);
+}
+
+/* Precio destacado */
+.precio-box {
+  display: inline-block;
+  background: var(--color-accent);
+  color: white;
+  padding: .5em 1em;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: .5em;
+}
+
+/* -------- TARJETAS DE SECCIÓN ---------- */
+
+.section-card {
+  background: #fafafa;
+  border-left: 5px solid var(--color-primary);
+  padding: 1em 1.2em;
+  border-radius: 10px;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section-card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  letter-spacing: .5px;
+}
+
+/* -------- LISTA DE SERVICIOS ---------- */
+
+ul.servicios-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul.servicios-lista li {
+  background: var(--color-light);
+  border: 1px solid #dedede;
+  padding: 1em;
+  margin-bottom: .8em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: transform .2s;
+}
+
+ul.servicios-lista li:hover {
+  transform: scale(1.02);
+  background-color: #f9f9f9;
+}
+
+ul.servicios-lista strong {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+}
+
+/* -------- BOTÓN VOLVER ---------- */
+
+.btn {
+  display: inline-block;
+  padding: .8em 1.5em;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* -------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
   main {
-    padding: 25px;
-    max-width: 1100px;
-    margin: 30px auto;
-    background-color: var(--color-light);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5em;
   }
-  
-  
-  h1 {
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 25px;
-  }
-  
 
-  .paquete-info {
-    text-align: center;
-    margin-bottom: 40px;
+  h1 {
+      font-size: 1.8rem;
   }
-  
+
   .paquete-info p {
-    font-size: 1.05em;
-    line-height: 1.6;
-    margin: 8px 0;
+      font-size: 1rem;
   }
-  
-  .paquete-info strong {
-    color: var(--color-primary);
-  }
-  
-  /* Precio destacado */
-  .precio-destacado {
-    display: inline-block;
-    background: var(--color-secondary);
-    color: var(--color-light);
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 6px;
-    font-size: 1.4em;
-    font-weight: bold;
-  }
-  
- 
-  .section-card {
-    background-color: var(--color-light);
-    border: 1px solid #ccc;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 30px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .section-card h3 {
-    margin-top: 0;
-    text-align: center;
-    color: var(--color-primary);
-    font-size: 1.5em;
-  }
-  
-  
-   
-  .servicios-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .servicios-lista li {
-    background-color: var(--color-light);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .servicios-lista li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  }
-  
-  .servicios-lista strong {
-    color: var(--color-primary);
-    font-size: 1.2em;
-  }
-  
-  .servicios-lista .precio-servicio {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--color-secondary);
-    margin: 10px 0;
-  }
-  
- 
-  .btn-volver {
-    display: block;
-    width: fit-content;
-    margin: 40px auto 0 auto;
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 1em;
-  }
-  
-  .btn-volver:hover {
-    background-color: var(--color-secondary);
-  }
-  
-  
-  @media (max-width: 768px) {
-    .servicios-lista {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    main {
-      margin: 10px;
-      padding: 15px;
-    }
-  }
-  
+}
+
+/* -------- ANIMACIÓN ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
