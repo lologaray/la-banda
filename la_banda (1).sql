@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-12-2025 a las 12:01:38
+-- Tiempo de generación: 10-12-2025 a las 12:23:15
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -121,10 +121,19 @@ INSERT INTO `paquete_servicio` (`id_servicio`, `id_paquete`) VALUES
 (1, 1),
 (1, 5),
 (2, 1),
+(2, 2),
 (3, 2),
 (4, 3),
+(5, 3),
 (5, 4),
-(7, 4);
+(6, 2),
+(7, 3),
+(7, 4),
+(8, 1),
+(8, 5),
+(9, 4),
+(9, 5),
+(10, 1);
 
 -- --------------------------------------------------------
 
