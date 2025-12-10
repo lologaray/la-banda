@@ -1,150 +1,160 @@
+
 :root {
-  --color-primary: #4a7c59;      /* Verde oliva moderno */
-  --color-secondary: #88a096;    /* Verde gris suave */
-  --color-background: #f2f2eb;   /* Beige suave */
-  --color-light: #ffffff;
-  --color-dark: #2b2b2b;
-  --color-accent: #d4a373;       /* Dorado suave */
-  --font-family-base: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
-}
-
-/* -------- GENERAL ---------- */
-
-body {
-  font-family: var(--font-family-base);
-  background-color: var(--color-background);
-  margin: 0;
-  padding: 0;
-  color: var(--color-dark);
-}
-
-/* -------- CONTENEDOR PRINCIPAL ---------- */
-
-main {
-  max-width: 1100px;
-  margin: 2.5em auto;
-  padding: 2.5em;
-  background-color: var(--color-light);
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-/* -------- TÍTULO ---------- */
-
-h1 {
-  text-align: center;
-  color: var(--color-primary);
-  font-size: 2.2rem;
-  margin-bottom: 1em;
-  letter-spacing: .5px;
-}
-
-/* -------- INFO DEL PAQUETE ---------- */
-
-.paquete-info p {
-  font-size: 1.05rem;
-  margin: .6em 0;
-  line-height: 1.6;
-}
-
-.paquete-info strong {
-  color: var(--color-primary);
-}
-
-/* Precio destacado */
-.precio-box {
-  display: inline-block;
-  background: var(--color-accent);
-  color: white;
-  padding: .5em 1em;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: .5em;
-}
-
-/* -------- TARJETAS DE SECCIÓN ---------- */
-
-.section-card {
-  background: #fafafa;
-  border-left: 5px solid var(--color-primary);
-  padding: 1em 1.2em;
-  border-radius: 10px;
-  margin: 1.5em 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.section-card h3 {
-  margin-top: 0;
-  color: var(--color-primary);
-  letter-spacing: .5px;
-}
-
-/* -------- LISTA DE SERVICIOS ---------- */
-
-ul.servicios-lista {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-ul.servicios-lista li {
-  background: var(--color-light);
-  border: 1px solid #dedede;
-  padding: 1em;
-  margin-bottom: .8em;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-  transition: transform .2s;
-}
-
-ul.servicios-lista li:hover {
-  transform: scale(1.02);
-  background-color: #f9f9f9;
-}
-
-ul.servicios-lista strong {
-  color: var(--color-accent);
-  font-size: 1.1rem;
-}
-
-/* -------- BOTÓN VOLVER ---------- */
-
-.btn {
-  display: inline-block;
-  padding: .8em 1.5em;
-  background-color: var(--color-primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s ease;
-  font-weight: 600;
-  margin-top: 1.5em;
-}
-
-.btn:hover {
-  background-color: var(--color-secondary);
-}
-
-/* -------- RESPONSIVE ---------- */
-
-@media (max-width: 768px) {
+    --color-primary: darkolivegreen;
+    --color-secondary: olive;
+    --color-background: #fdf6e3;
+    --color-light: #fff;
+    --color-dark: #333;
+    --color-accent: #007b4f;
+    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+  body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark);
+  }
+  
+ 
+  header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  header .logo-img {
+    width: 90px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    margin: 0.3em 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  header p {
+    font-style: italic;
+    font-size: 1rem;
+    color: #e6e6d2;
+  }
+  
+  
   main {
-      padding: 1.5em;
+    max-width: 1000px;
+    margin: 2em auto;
+    background-color: var(--color-light);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-
-  h1 {
-      font-size: 1.8rem;
+  
+  
+  .paquete-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2em;
   }
-
+  
+  .paquete-detalle img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .paquete-info {
+    flex: 1;
+  }
+  
+  .paquete-info h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+  }
+  
   .paquete-info p {
-      font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1em;
   }
-}
-
-/* -------- ANIMACIÓN ---------- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  
+  .paquete-info .precio {
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
+  
+  .paquete-info .duracion {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  
+  .alert {
+    margin: 3em auto;
+    width: 80%;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .alert-danger {
+    background-color: #ffe5e5;
+    color: #a10000;
+    border: 1px solid #ffb3b3;
+  }
+  
+  .alert-warning {
+    background-color: #fff7e5;
+    color: #a16200;
+    border: 1px solid #ffd280;
+  }
+  
+  
+  footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 3em;
+    font-size: 0.9rem;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .paquete-detalle {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .paquete-info {
+      text-align: center;
+    }
+  }
+  
